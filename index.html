@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="description" content="A list of news articles curated autonomously by an algorithm designed by Max Crone">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>News, curated by Max Crone</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0 8px;
+            box-sizing: border-box;
+            width: 100%;
+            font-family: serif;
+        }
+        .container {
+            padding-left: 8px;
+            padding-right: 8px;
+            box-sizing: border-box;
+        }
+        h1 {
+            cursor: pointer;
+        }
+        .title {
+            margin-top: 0;
+            cursor: pointer;
+        }
+        .title > a {
+            text-decoration: none;
+            color: #212121;
+        }
+        .title > a:visited {
+            /*color: #9e9e9e;*/
+        }
+        .title > a:hover, .title > a:active {
+            text-decoration: underline;
+        }
+        .source, .date {
+            font-family: sans-serif;
+            color: #484848;
+        }
+        .article {
+            margin-bottom: 24px;
+        }
+        .article p {
+            max-width: 630px;
+            line-height: 1.6rem;
+            font-size: 1.2rem;
+            font-family: georgia, 'times new roman', times, serif;
+        }
+
+        @media only screen and (min-width: 1000px) {
+            body { padding-left: 15%; }
+        }
+    </style>
+</head>
+<body>
+    <h1>News</h1>
+    <div class="container"></div>
+    <h6>curated by <a href="http://maxcrone.org">Max Crone</a>, all copyrights belong to their respective owners</h6>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        var clearContainer = function() {
+            console.log("Clearing...");
+            $(".container").empty();
+        }
+
+        var populate = function() {
+            clearContainer();
+
+            $.getJSON("data.json", function(data) {
+                var articles = data;
+                var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                articles.sort(function(a, b) {
+                    return  Date.parse(a.date) < Date.parse(b.date);
+                });
+                articles.sort();
+                $(articles).each(function(index) {
+                    var art = this;
+                    var d = new Date(Date.parse(this.date));
+                    //var entry = "<div id=\"" + index + "\" class=\"article\"><span class=\"source\">" + this.source + "</span> - <span class=\"date\">" + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "</span><h3 class=\"title\"><a href=\"" + this.url + "\" target=\"_blank\">" + this.title + "</a></h3></div>";
+                    var entry = "<div id=\"" + index + "\" class=\"article\"><span class=\"source\">" + this.source + "</span> - <span class=\"date\">" + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "</span><h3 class=\"title\">" + this.title + "</h3></div>";
+                    $(".container").append(entry);
+                    $("#" + index).on("click", function() {
+                        readArticle(art);
+                    });
+                });
+            });
+        }
+
+        var readArticle = function(art) {
+            clearContainer();
+            var d = new Date(Date.parse(art.date));
+            var article = "<div class=\"article\"><span class=\"source\">" + art.source + "</span> - <span class=\"date\">" + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "</span><h3 class=\"title\"><a href=\"" + art.url + "\" target=\"_blank\">" + art.title + " [source]</a></h3><p>" + art.text + "</p></div>";
+            $(".container").append(article);
+            window.scrollTo(0, 0);
+        }
+
+        window.onload = populate;
+        $("h1").on("click", function() {
+            clearContainer();
+            populate();
+        });
+    </script>
+</body>
+</html>

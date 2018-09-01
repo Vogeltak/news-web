@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="description" content="A list of news articles curated autonomously by an algorithm designed by Max Crone">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>News, curated by Max Crone</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0 8px;
+            box-sizing: border-box;
+            width: 100%;
+            font-family: serif;
+        }
+        .container {
+            padding-left: 8px;
+            padding-right: 8px;
+            box-sizing: border-box;
+        }
+        h1 {
+            cursor: pointer;
+        }
+	h1 > a {
+	    text-decoration: none;
+	    color: #212121;
+	}
+        .title {
+            margin-top: 0;
+            cursor: pointer;
+        }
+        .title > a {
+            text-decoration: none;
+            color: #212121;
+        }
+        .title > a:visited {
+            /*color: #9e9e9e;*/
+        }
+        .title > a:hover, .title > a:active {
+            text-decoration: underline;
+        }
+        .source, .date {
+            font-family: sans-serif;
+            color: #484848;
+        }
+        .article {
+            margin-bottom: 24px;
+        }
+        .article p {
+            max-width: 630px;
+            line-height: 1.6rem;
+            font-size: 1.2rem;
+            font-family: georgia, 'times new roman', times, serif;
+	    text-align: left;
+        }
+	.scrollTop {
+	    cursor: pointer;
+	    text-transform: uppercase;
+	    text-decoration: underline;
+	}
+
+        @media only screen and (min-width: 1000px) {
+            body { padding-left: 15%; }
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="{{ url_for('list') }}">News</a></h1>
+    <div class="container">{% block content %}{% endblock %}</div>
+    <div class="scrollTop">Top</div>
+    <h6>curated by <a href="http://maxcrone.org">Max Crone</a>, all copyrights belong to their respective owners</h6>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+	$(".scrollTop").click(function() {
+	    $("html").animate({ scrollTop: 0 }, "normal");
+	    return false;
+	});
+    </script>
+</body>
+</html>
