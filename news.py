@@ -12,12 +12,13 @@ def convertDate(timestruct):
 news = []
 
 feeds = {}
-feeds['nyt'] = {'name': 'The New York Times', 'link': 'http://rss.nytimes.com/services/xml/rss/nyt/World.xml', 'lower_bound': 500}
-feeds['nrc'] = {'name': 'NRC', 'link': 'https://nrc.nl/rss', 'lower_bound': 1500}
-feeds['guardian'] = {'name': 'The Guardian', 'link': 'https://www.theguardian.com/world/rss', 'lower_bound': 1000}
-feeds['volkskrant'] = {'name': 'De Volkskrant', 'link': 'https://www.volkskrant.nl/nieuws-achtergrond/rss.xml', 'lower_bound': 1000}
-feeds['newyorker'] = {'name': 'The New Yorker', 'link': 'https://www.newyorker.com/feed/news', 'lower_bound': 1000}
-feeds['groene'] = {'name': 'De Groene Amsterdammer', 'link': 'https://groene.nl/feed.atom', 'lower_bound': 1264}
+#feeds['nyt'] = {'name': 'The New York Times', 'link': 'http://rss.nytimes.com/services/xml/rss/nyt/World.xml', 'lower_bound': 500}
+feeds['nrc'] = {'name': 'NRC', 'link': 'https://nrc.nl/rss', 'lower_bound': 1200}
+feeds['guardian'] = {'name': 'The Guardian', 'link': 'https://www.theguardian.com/world/rss', 'lower_bound': 1100}
+feeds['volkskrant'] = {'name': 'De Volkskrant', 'link': 'https://www.volkskrant.nl/nieuws-achtergrond/rss.xml', 'lower_bound': 1300}
+feeds['newyorker'] = {'name': 'The New Yorker', 'link': 'https://www.newyorker.com/feed/news', 'lower_bound': 2000}
+feeds['groene'] = {'name': 'De Groene Amsterdammer', 'link': 'https://groene.nl/feed.atom', 'lower_bound': 1000}
+feeds['fd'] = {'name': 'Het Financieele Dagblad', 'link': 'https://fd.nl/?rss', 'lower_bound': 1000}
 
 count = 0
 for org, src in feeds.items():
