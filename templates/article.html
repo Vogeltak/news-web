@@ -3,9 +3,9 @@
 {% block content %}
 {% if a %}
 <div class="article">
-    <span class="source">{{ a.source }}</span> - 
-    <span class="date">{{ a.date }}</span>
-    <h3 class="title"><a href="{{ a.url }}" target="_blank">{{ a.title }} [source]</a></h3>
+	<h1 class="title"><a href="{{ a.url }}" target="_blank">{{ a.title }}</a></h1>
+    <p class="source">{{ a.source }} &bull; {{ a.date }}</p>
+    <img class="hero" src="{{ a.img }}">
     <p>{{ a.text | safe}}</p>
 </div>
 {% else %}

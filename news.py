@@ -6,6 +6,8 @@ import feedparser
 from datetime import datetime, timedelta
 import json
 
+DATA_PATH = '/var/www/news/data.json'
+
 def convertDate(timestruct):
     return datetime(*timestruct[:6])
 
@@ -47,5 +49,5 @@ for org, src in feeds.items():
 
 print("Found {} articles".format(count))
 
-with open('/var/www/news/data.json', 'w') as out:
+with open(DATA_PATH, 'w') as out:
     json.dump(news, out, indent=4, sort_keys=True, default=str)

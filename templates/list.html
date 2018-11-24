@@ -2,9 +2,9 @@
 
 {% block content %}
 {% for a in articles %}
-<div class="article">
-    <span class="source">{{ a.source }}</span> - 
-    <span class="date">{{ a.date }}</span>
+<div class="item">
+    <span class="source">{{ a.source }}</span> 
+    <span class="date">&bull; {{ a.date }}</span>
     <h3 class="title"><a href="{{ url_for('article', id=loop.index0) }}">{{ a.title }}</a></h3>
 </div>
 {% else %}

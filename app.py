@@ -6,10 +6,12 @@ from flask import jsonify
 import json
 from datetime import datetime
 
+DATA_PATH = '/var/www/news/data.json'
+
 app = Flask(__name__)
 
 def get_articles():
-	with open('/var/www/news/data.json', 'r') as f:
+	with open(DATA_PATH, 'r') as f:
 		data = json.load(f)	
 
 	data.sort(key=lambda x: x['date'], reverse=True)
@@ -33,7 +35,7 @@ def article(id):
 # API functionality
 @app.route('/api/v1/articles')
 def api_articles():
-	with open('/var/www/news/data.json', 'r') as f:
+	with open(DATA_PATH, 'r') as f:
 		data = json.load(f)
 	
 	return jsonify(data)
