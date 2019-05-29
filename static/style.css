@@ -25,8 +25,8 @@ body {
 }
 
 .logo {
-	height: 36px;
-	padding: 16px;
+	height: 48px;
+	padding-top: 16px;
 }
 
 .scrollTop {
@@ -82,7 +82,7 @@ h6 {
 }
 
 .hero {
-	margin: 24px 0;
+	margin: 16px 0;
 	max-width: 100%;
 }
 
