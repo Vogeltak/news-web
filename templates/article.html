@@ -1,11 +1,16 @@
 {% extends "index.html" %}
 
+{% if a %}
+{% block hero %}
+<img class="hero" src="{{ a.img }}">
+{% endblock %}
+{% endif %}
+
 {% block content %}
 {% if a %}
 <div class="article">
-	<h1 class="title"><a href="{{ a.url }}" target="_blank">{{ a.title }}</a></h1>
+    <h1 class="title"><a href="{{ a.url }}" target="_blank">{{ a.title }}</a></h1>
     <p class="source">{{ a.source }} &bull; {{ a.date }}</p>
-    <img class="hero" src="{{ a.img }}">
     <p>{{ a.text | safe}}</p>
 </div>
 {% else %}

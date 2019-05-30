@@ -9,14 +9,17 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="365.05002mm"
-   height="130.02379mm"
-   viewBox="0 0 365.05004 130.02379"
+   width="130.0238mm"
+   height="130.0238mm"
+   viewBox="0 0 130.0238 130.0238"
    version="1.1"
    id="svg8"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="logo.svg"
-   style="enable-background:new">
+   inkscape:version="0.92.1 r"
+   sodipodi:docname="max.svg"
+   style="enable-background:new"
+   inkscape:export-filename="/home/max/data/art/Logos/maxcrone.org/max.png"
+   inkscape:export-xdpi="390.69769"
+   inkscape:export-ydpi="390.69769">
   <defs
      id="defs2">
     <clipPath
@@ -37,29 +40,22 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="868.51141"
-     inkscape:cy="-70.15133"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="161.57811"
+     inkscape:cy="215.06955"
      inkscape:document-units="mm"
-     inkscape:current-layer="g5539"
+     inkscape:current-layer="layer6"
      showgrid="false"
      inkscape:pagecheckerboard="false"
      inkscape:window-width="1920"
      inkscape:window-height="1025"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0"
-     showguides="true"
-     inkscape:guide-bbox="true">
-    <sodipodi:guide
-       position="-27.93858,63.859625"
-       orientation="0,1"
-       id="guide4145" />
-  </sodipodi:namedview>
+     fit-margin-bottom="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -77,7 +73,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline;opacity:1"
-     transform="translate(-39.988098,-83.488107)">
+     transform="translate(-39.988098,-83.488098)">
     <circle
        style="fill:#4caf50;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        id="path5064"
@@ -90,7 +86,7 @@
      id="layer2"
      inkscape:label="inner"
      style="display:inline"
-     transform="translate(-39.988098,-83.488107)">
+     transform="translate(-39.988098,-83.488098)">
     <circle
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.30140465"
        id="path5085"
@@ -99,35 +95,21 @@
        r="33.800381" />
   </g>
   <g
-     transform="translate(-39.988098,-83.488107)"
+     transform="translate(-39.988098,-83.488098)"
      style="display:inline;opacity:1"
      id="g5539"
      inkscape:groupmode="layer"
-     inkscape:label="clip">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:70.55555725px;line-height:125%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Semi-Condensed';letter-spacing:0px;word-spacing:0px;fill:#212121;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="217.79718"
-       y="173.59967"
-       id="text4141"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4143"
-         x="217.79718"
-         y="173.59967"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Semi-Condensed';fill:#212121;fill-opacity:1;">NEWS</tspan></text>
-  </g>
+     inkscape:label="clip" />
   <g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="shadow"
-     style="display:none"
-     transform="translate(-1.8193244e-6,-1.4027671e-5)">
+     style="display:inline">
     <rect
        style="opacity:1;fill:#000000;fill-opacity:0.25098039;stroke:none;stroke-width:0.26458332"
        id="rect5535"
-       width="65.011902"
-       height="130.0238"
+       width="50%"
+       height="100%"
        x="65.011902"
        y="-0.0028185085"
        clip-path="url(#clipPath5541)" />

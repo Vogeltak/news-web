@@ -8,10 +8,15 @@
     <title>News, curated by Max Crone</title>
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+
 </head>
 <body>
     <a href="{{ url_for('list') }}"><img class="logo" src="{{ url_for('static', filename='logo.svg') }}"></a>
-    <div class="container">{% block content %}{% endblock %}</div>
+    {% block hero %}{% endblock %}
+    <div class="container">
+	{% block content %}{% endblock %}
+    </div>
     <div class="scrollTop">Top</div>
     <h6>curated by <a href="http://maxcrone.org">Max Crone</a>, all copyrights belong to their respective owners</h6>
 
